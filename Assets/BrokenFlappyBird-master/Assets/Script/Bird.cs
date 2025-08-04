@@ -18,6 +18,7 @@ public class Bird : MonoBehaviour
     
     private void Awake()
     {
+
     }
 
     void Start()
@@ -110,6 +111,8 @@ public class Bird : MonoBehaviour
         isAlive = false;
         birdRB.linearVelocity = Vector2.zero;
         GameManager.Instance.GameOver();
+        GameManager.Instance.ResetGame();
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
