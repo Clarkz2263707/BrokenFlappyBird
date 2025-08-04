@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         uiManager.HideReady();
         pipeSpawner.enabled = true;
         bird.StartGame();
+        uiManager.UpdateScore(score);
     }
 
     public void GameOver()
@@ -63,6 +64,6 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore()
     {
         score++;
-        uiManager.UpdateScore(0);
+        uiManager.UpdateScore(score); 
     }
 }
